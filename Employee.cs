@@ -7,8 +7,9 @@ using static System.Console;
 
 namespace Console_Project_Payroll_Properties
 {
-    class Employee
+    abstract class Employee
     {
+        public static decimal totalPay = 0;
         // auto-implemented properties
         private string FirstName { get; set; }
         private string LastName { get; set; }
@@ -23,7 +24,9 @@ namespace Console_Project_Payroll_Properties
         // tostring method
         public override string ToString()
         {
-            return ($"Employee {EmployeeID}: {FirstName} {LastName}, ");
+            return ($"Employee {EmployeeID}: {FirstName} {LastName},");
         }
+        // abstract method
+        public abstract decimal Earnings();
     }
 }
